@@ -13,7 +13,7 @@ a{
 }
 #title{
     font-family: 'Monoton', cursive;
-    padding-right: 500px;
+    padding-right: 400px;
     font-size:40px;
     float: left;
     
@@ -31,7 +31,7 @@ li {
 }
 .listItem{
     font-family: 'Fugaz One', cursive;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .logo{
@@ -40,4 +40,8 @@ li {
     height: 60px;
     width: 60px;
     padding-right: 10px;
+}
+.avi{
+    height: 60px;
+    width: 60px;
 }

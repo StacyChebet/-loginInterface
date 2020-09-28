@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $enteredEmail = $_SESSION["correctEmail"];
+    $enteredPassword = $_SESSION["correctPassword"];
+    $username = $_SESSION["correctName"];
+    $avi = $_SESSION["correctAvi"];
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,8 +22,10 @@
                 <img class="logo" src="images/camLogo.png">
                 <ul>
                     <li id="title"><a href="landingPage.php">STACEGRAM</a></li>
-                    <li class="listItem"><a href="">Logout</a></li>
-                    <li class="listItem"><a href="">Change Password</a></li>
+                    <li class="listItem"<?php ?>><a href="index.php">Logout</a></li>
+                    <li class="listItem"><a href="changePassword.php">Change Password</a></li>
+                    <li class="listItem"><?php echo ($username)?></li>
+                    <li class="listItem"><img class="avi" src="<?php echo $avi; ?>" alt="picture"/></li>
                     </ul>
             </div>
         </div> 
