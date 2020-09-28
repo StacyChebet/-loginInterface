@@ -1,0 +1,60 @@
+/* .bgImage{
+    background-image: url(../images/loginBg.jpeg);
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* border:3px;
+    border-style: solid;
+    border-color:#FCE205; 
+} */
+body{
+    background-image: url(../images/loginBg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#topNavBar{
+    /* border:3px;
+    border-style: solid;
+    border-color:#FCE205; */
+    font-size: 20px;
+    /* overflow: hidden; */
+    background-color: transparent;
+    
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+#title{
+    font-family: 'Monoton', cursive;
+    padding-right: 500px;
+    font-size:40px;
+    float: left;
+    
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    padding-right: 40px;
+    float: right;
+}
+.listItem{
+    font-family: 'Fugaz One', cursive;
+    font-size: 30px;
+}
+
+.logo{
+    margin-top: 0px;
+    float: left;
+    height: 60px;
+    width: 60px;
+    padding-right: 10px;
+}
