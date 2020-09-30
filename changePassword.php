@@ -1,4 +1,5 @@
 <?php
+    include("connect.php");
     session_start();
     $password = $_SESSION["correctPassword"];
     if(isset($_POST["submit"])){
