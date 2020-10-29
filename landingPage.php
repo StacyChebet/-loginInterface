@@ -1,9 +1,11 @@
 <?php
+    include("connect.php");
     session_start();
     $enteredEmail = $_SESSION["correctEmail"];
     $enteredPassword = $_SESSION["correctPassword"];
     $username = $_SESSION["correctName"];
     $avi = $_SESSION["correctAvi"];
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,15 +20,29 @@
     </head>
     <body>
         <div class="container">
-            <div id="topNavBar">
-                <img class="logo" src="images/camLogo.png">
-                <ul>
-                    <li id="title"><a href="landingPage.php">STACEGRAM</a></li>
-                    <li class="listItem"<?php ?>><a href="index.php">Logout</a></li>
-                    <li class="listItem"><a href="changePassword.php">Change Password</a></li>
-                    <li class="listItem"><?php echo ($username)?></li>
-                    <li class="listItem"><img class="avi" src="<?php echo $avi; ?>" alt="picture"/></li>
-                    </ul>
+            <div id = "navbar">
+                <a><img class="logo" src="images/camLogo.png"></a>
+                <a id="title" href="landingPage.php">STACEGRAM</a>
+                <div class="dropdown">
+                    <img class="avi" src="<?php echo $avi; ?>" alt="picture"/>
+                    <a><input type="image" src="images/post.png" alt="Submit" width="48" height="48" class="add"></a>
+                    <div class="caretWrapper">
+                        <a class="caret"><?php echo ($username)?> &#9660;</a>
+                        <div class="dropdownContent">
+                            <a href="userProfile.php">Profile</a>
+                            <a href="changePassword.php">Change Password</a>
+                            <a href="" onclick='confirmLogout()'>Logout</a>
+                            <script>
+                                function confirmLogout(){
+                                    var ask=confirm("Are you sure you want to logout?");
+                                    if(ask){
+                                    window.location="index.php";
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div> 
     </body>

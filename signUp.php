@@ -1,4 +1,5 @@
 <?php
+    include("connect.php");
     session_start();
     if (isset($_POST["submit"])){
         $name=$_POST["name"];
